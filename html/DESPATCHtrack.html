@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DESPATCHtrack</title>
+</head>
+<script src="DESPATCHtrack.js"></script>
+<link rel="stylesheet" href="DESPATCHtrack.css" type="text/css">
+<body>
+<form>
+<button type="button" onclick="getNow(this.form)">Now</button>
+<br>
+Date UTC:<input type="date" step="1" onchange="checkDateTime(this.form)" id="udate" value="2014-12-03">
+<br>
+Time UTC:<input type="time" step="1" onchange="checkDateTime(this.form)" id="utime" value="06:20:12">
+<br>
+Date Time UTC:<input type="datetime" step="1" id="utcTime" value="2014-12-03T06:20:12Z" readonly>
+<br>
+UnixTime:<input type="text" id="time" value="1417587612" size="12" readonly>
+<br>
+<br>
+Observer's Location
+<br>
+Latitude:<input type="text"id="lat" value="35.610514" size="10">
+<br>
+Longitude:<input type="text" id="lon" value="139.351106" size="10">
+<br>
+Altitude:<input type="text" id="alt" value="0" size="4">
+<br>
+<br>
+<button type="button" onclick="getInfo(this.form)">Get DESPATCH Information</button>
+<br>
+<p class="result" id="unixtime">Unix Time:</p>
+<p class="result" id="elevation">Elevation:</p>
+<p class="result" id="azimuth">Azimuth:</p>
+<p class="result" id="frequency">Frequency:</p>
+<p class="result" id="distance">Distance:</p>
+<p class="result" id="declination">Declination:</p>
+<p class="result" id="right_ascension">Right Ascension:</p>
+<p class="result" id="phase">Phase:</p>
+</form>
+</body>
+</html>
