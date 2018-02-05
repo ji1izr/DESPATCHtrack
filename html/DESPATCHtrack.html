@@ -22,7 +22,11 @@ UnixTime:<input type="text" id="time" value="1417587612" size="12" readonly>
 <br>
 Observer's Location
 <br>
-Latitude:<input type="text"id="lat" value="35.610514" size="10">
+<button type="button" onclick="posSave(this.form)">Save</button>
+<button type="button" onclick="posLoad(this.form)">Load</button>
+<button type="button" onclick="posReset(this.form)">Reset</button>
+<br>
+Latitude:<input type="text" id="lat" value="35.610514" size="10">
 <br>
 Longitude:<input type="text" id="lon" value="139.351106" size="10">
 <br>

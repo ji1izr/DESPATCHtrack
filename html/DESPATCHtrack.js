@@ -27,6 +27,33 @@ function getNow(form){
  form.utime.value=dNT;
  checkDateTime(form);
 }
+function posSave(form){
+ if(window.localStorage){
+  var data_lat = form.lat.value;
+  var data_lon = form.lon.value;
+  var data_alt = form.alt.value;
+  window.localStorage.setItem("data_lat", data_lat);
+  window.localStorage.setItem("data_lon", data_lon);
+  window.localStorage.setItem("data_alt", data_alt);
+
+ }
+}
+function posLoad(form){
+ if (window.localStorage){
+  var data_lat = window.localStorage.getItem("data_lat");
+  var data_lon = window.localStorage.getItem("data_lon");
+  var data_alt = window.localStorage.getItem("data_alt");
+  form.lat.value = data_lat;
+  form.lon.value = data_lon;
+  form.alt.value = data_alt;
+ }
+}
+function posReset(form){
+  window.localStorage.clear();
+  form.lat.value = 35.610514;
+  form.lon.value = 139.351106;
+  form.alt.value = 0;
+}
 function setUnixTime(form){
  var fUdate=form.udate.value;
  var fUtime=form.utime.value;
