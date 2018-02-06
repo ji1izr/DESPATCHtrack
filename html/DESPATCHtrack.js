@@ -75,6 +75,30 @@ function checkDateTime(form){
  }
  setUnixTime(form);
 }
+function checkLat(form){
+ if (form.lat.value>90){
+  form.lat.value="90";
+ }
+ if (form.lat.value<-90){
+ form.lat.value="-90";
+ }
+}
+function checkLon(form){
+ if (form.lon.value>180){
+  form.lon.value="180";
+ }
+ if (form.lon.value<-180){
+ form.lon.value="-180";
+ }
+}
+function checkAlt(form){
+ if (form.alt.value>8848){
+  form.alt.value="8848";
+ }
+ if (form.alt.value<0){
+ form.alt.value="0";
+ }
+}
 function getInfo(form){
  var dTime=form.time.value;
  var dLat=form.lat.value;

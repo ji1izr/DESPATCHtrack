@@ -26,11 +26,11 @@ Observer's Location
 <button type="button" onclick="posLoad(this.form)">Load</button>
 <button type="button" onclick="posReset(this.form)">Reset</button>
 <br>
-Latitude:<input type="text" id="lat" value="35.610514" size="10">
+Latitude:<input type="text" onchange="checkLat(this.form)" id="lat" value="35.610514" size="10">
 <br>
-Longitude:<input type="text" id="lon" value="139.351106" size="10">
+Longitude:<input type="text" onchange="checkLon(this.form)" id="lon" value="139.351106" size="10">
 <br>
-Altitude:<input type="text" id="alt" value="0" size="4">
+Altitude:<input type="text" onchange="checkAlt(this.form)" id="alt" value="0" size="4">
 <br>
 <br>
 <button type="button" onclick="getInfo(this.form)">Get DESPATCH Information</button>
